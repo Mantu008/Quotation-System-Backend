@@ -34,6 +34,8 @@ const app = new Hono();
 
 // Apply CORS middleware globally
 
+console.log("**")
+
 app.use('*', async (c, next) => {
 	c.res.headers.append('Access-Control-Allow-Origin', 'http://localhost:5173');
 	// c.res.headers.append('Access-Control-Allow-Origin', 'https://quotation-system-ten.vercel.app');
