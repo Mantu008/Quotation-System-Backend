@@ -1,0 +1,22 @@
+pipeline {
+  agent any
+    
+  tools {nodejs "NodeJS20"}
+    
+  stages {
+        
+    stage('Git') {
+      steps {
+        git 'https://github.com/Mantu008/Quotation-System-Backend.git'
+      }
+    }
+     
+    stage('Build') {
+      steps {
+        bat 'npm install'
+      }
+    }  
+    
+        
+  }
+}
