@@ -76,7 +76,7 @@ app.get('/ui', swaggerUI({ url: './static/openapi.json' }));
 
 // API routes
 app.get('/', (c) => {
-	return c.text('Hello Hono!');
+	return c.text('Hello Hono!..');
 });
 app.route('/products', productController);
 app.route('/categories', categoryController);
