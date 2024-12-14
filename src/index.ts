@@ -196,7 +196,8 @@ const document = createDocument({
 
 	paths: { ...oaspGetAccessRoles, ...oaspGetUser, ...oaspGetCategories, ...oaspGetGstRates, ...oaspGetProducts, ...oaspGetTargets, ...oaspGetProductModel, ...oaspGetStates, ...oaspGetContactNatures, ...oaspGetInquirySources, ...oaspGetIndustries, ...oaspGetMachines, ...oaspGetCompetitors, ...oaspGetCustomers, ...oaspGetContacts, ...oaspGetBanks, ...oaspGetPaymentmethods, ...oaspGetDefaultOtherCharges, ...oaspGetBusinessInfoOthers, ...oaspGetCurrrencies, ...oaspGetCustomerContacts }
 });
-fs.writeFileSync('./static/openapi.json', JSON.stringify(document));
+
+fs.writeFileSync('./openapi.json', JSON.stringify(document));
 
 const port = 80;
 console.log(`Server is running on port ${port}`);
