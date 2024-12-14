@@ -34,8 +34,6 @@ const app = new Hono();
 
 // Apply CORS middleware globally
 
-console.log("**")
-
 app.use('*', async (c, next) => {
 	c.res.headers.append('Access-Control-Allow-Origin', 'http://localhost:5173');
 	// c.res.headers.append('Access-Control-Allow-Origin', 'https://quotation-system-ten.vercel.app');
@@ -200,7 +198,7 @@ const document = createDocument({
 });
 fs.writeFileSync('./static/openapi.json', JSON.stringify(document));
 
-const port = 3000;
+const port = 80;
 console.log(`Server is running on port ${port}`);
 
 serve({
